@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    /* overflow-x: hidden; */
+    overflow-x: visible;
+}
+
+.middle-fifth-another {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 50px;
+    gap: 30px;
+}
+/* .middle-fifth-another:nth-child(even) {
+    gap: 2px;
+} */
+
+.fifth-1 {
+    flex: 0 0 calc(25% - 23px);
+}
+
+.floor-4 img {
+    display: block;
+}
+
+.floor-5{
+    margin: auto;
+    width: 100%;
+}
+
+.sixth_inner{
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    width: 90%;
+}
+.sixth_inner img{
+    width: 100%;
+    height: auto;
+}

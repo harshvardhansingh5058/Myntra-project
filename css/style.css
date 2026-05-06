@@ -1,0 +1,429 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ======= FIXED BANNER ======= */
+.fixed-banner {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4a5a6f;
+    padding: 0;
+    z-index: 800;
+    box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fixed-banner:hover {
+    right: -2px;
+    box-shadow: -4px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 12px;
+    gap: 15px;
+    transform: rotate(180deg);
+}
+
+.banner-icon {
+    color: white;
+    font-size: 24px;
+    transform: rotate(180deg);
+}
+
+.banner-text {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    padding: 15px 0px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.grandparent-header {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: auto;
+    gap: 20px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.inner_menu,
+.profile {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.inner_menu sup {
+    color: #ff3f6c;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.inner_menu {
+    gap: 30px;
+}
+
+.inner_menu > ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+.profile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-header {
+    flex-grow: 1;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 70%;
+    background-color: #F5F5F6;
+    padding: 0px 10px;
+    border-radius: 8px;
+    flex-grow: 1;
+    color: #81828b;
+    font-size: 14px;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.profile > ul,
+a {
+    font-size: 14px;
+}
+
+/* ======= NAVBAR ======= */
+
+.navMenu_link {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Invisible bridge — mouse gap fill karta hai dropdown band na ho */
+.navMenu_link::after {
+    content: '';
+    display: block;
+    height: 25px;
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+}
+
+.menu-item {
+    position: fixed;
+    top: 64px; /* apni header height ke hisaab se adjust karo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    display: none;
+    z-index: 999;
+}
+
+.navMenu_link:hover .menu-item {
+    display: block;
+}
+
+/* ======= DROPDOWN ======= */
+
+.outer-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 10px;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    padding: 6px 20px;
+}
+
+.outersub-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 18%;
+    min-width: 0;
+    min-height: 100%;
+    padding: 0 10px;
+}
+
+.outersub-menu:nth-child(even) {
+    background-color: #F5F5F6;
+}
+
+.submenu-heading {
+    color: #ff3f6c;
+    margin: 8px 0px 6px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.sub-menu {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 8px;
+}
+
+.submenu-nav-links {
+    color: #282c3f;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.submenu-nav-links:hover {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.topborder {
+    padding-top: 5px;
+    border-top: 3px solid #eee;
+}
+
+/* ======= MIDDLE SECTION ======= */
+
+.outer-middle {
+    width: 100%;
+}
+
+.middle-inner {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.middle-first img {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+}
+
+.middle-second img {
+    width: 100%;
+}
+
+.floor-2 {
+    display: flex;
+}
+
+.middle-third img {
+    width: 100%;
+}
+
+.middle-fouth img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.middle-fifth {
+    display: flex;
+}
+
+.middle-sixth {
+    display: flex;
+}
+
+.sixth-another {
+    display: flex;
+    margin: auto;
+}
+
+.fifth-2 img {
+    display: block;
+}
+
+.fifth-1 img {
+    width: 100%;
+}
+
+.middle-sixth img {
+    width: 100%;
+}
+
+/* ======= FOOTER ======= */
+
+.outer-footer {
+    background-color: #FAFBFC;
+}
+
+.inner-footer {
+    margin: auto;
+    max-width: 1170px;
+}
+
+.floor-1 {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+
+.floor-1 > div {
+    min-width: 0;
+}
+
+.online-shoping {
+    margin: 20px 20px;
+}
+
+.online-shoping p {
+    font-size: 12px;
+    color: #282C3F;
+    font-weight: 700;
+    padding: 20px 0px;
+    white-space: nowrap;
+}
+
+.second-p {
+    padding: 10px 0px !important;
+}
+
+.online-shoping li {
+    font-size: 14px;
+    color: #81828b;
+    padding: 2px 0px;
+}
+
+.store {
+    gap: 0px;
+    margin-left: 0;
+    width: 250px;
+}
+
+.inner-store {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.store-img img {
+    width: 45%;
+}
+
+.store-img {
+    display: flex;
+    gap: 15px;
+}
+
+.keepIn img {
+    width: 25px;
+    height: auto;
+}
+
+.keep-img {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.keepIn p {
+    padding: 10px 0px;
+}
+
+.inner-ori {
+    display: flex;
+    gap: 10px;
+    margin: 40px 0px;
+}
+
+.inner-ori p {
+    color: #81828b;
+}
+
+.inner-ori p b {
+    color: #000;
+}
+
+.ori-img img {
+    width: 50px;
+}
+
+.floor-2 {
+    margin: auto;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.pop {
+    display: flex;
+}
+
+.pop p {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.line {
+    background-color: #81828b;
+}
